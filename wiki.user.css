@@ -10,6 +10,16 @@
 
 @preprocessor stylus
 
+== colors ==
+@var	color		blackBg			'Black Background'				#000
+@var	color		infoBg			'Infobox Background'			#111
+@var	color		InactiveTab		'Inactive Tab'					#668
+@var	color		SelectTab		'Inactive Tab'					#338
+@var	color		whiteTx			'white Text'					#000
+
+
+==/UserStyle== */
+
 @-moz-document domain("wikipedia.org") {
 
 	body, .noprint, .mw-body {
