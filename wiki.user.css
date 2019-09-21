@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wiki Black
 @namespace      GrauGeist
-@version        0.0.8
+@version        0.0.9
 @homepageURL	https://github.com/GrauGeist/wiki-black
 @updateURL		https://raw.githubusercontent.com/GrauGeist/wiki-black/master/wiki.user.css
 @supportURL 	https://github.com/GrauGeist/wiki-black/issues
@@ -14,7 +14,7 @@
 @var	color		bodyBg			'Body background'				#111
 @var	color		blackBg			'Black background'				#000
 @var	color		bluedBg			'Blued background'				#102
-@var	color		inactiveBg		'Inactive background'			#668
+@var	color		inactiveBg		'Inactive background'			#223
 @var	color		selectedBg		'Selected background'			#338
 @var	color		basicTx			'basic Text'					#eee
 @var	color		headerTx		'header Text'					#ddd
@@ -41,7 +41,7 @@
 	}
 	
 	/* left & top nav */
-	body, .noprint {
+	body, .noprint, .vertical-navbox, .navbox, .catlinks  {
 		background: var(--bodyBg) !important;
 		color: var(--basicTx);
 	}
@@ -80,16 +80,57 @@
 		background: var(--bodyBg);
 		color: var(--headerTx);
 		
-	}
-	.infobox td[style*="background:#CCF"] {
-			background: #437 !important;
+		.summary album {
+			background-color: #214 !important;
+		}.description {
+			background-color: #103 !important;
 		}
-	.infobox th[style*="background:#EEF"], .infobox th[style*="background:#DDF"] {
+	
+		th[style] {
 			background: #215 !important;
 		}
-	.infobox td[style*="background:#EEF"] {
+		td[style*="background:#CCF"] {
+			background: #437 !important;
+		}
+		td[style*="background:#EEF"] {
 			background: var(--bluedBg) !important;
 		}
+	
+	}
+	
+	/* tracklist */
+	.tracklist {
+		background: inherit;
+		th {
+			background-color: #222 !important;
+		}
+		tr[style*="background-color:#fff"] {
+			background-color: #000 !important;
+		}
+		tr[style*="background-color:#f7f7f7"] {
+			background-color: #111 !important;
+		}
+		span[style], td[style*="background-color:#eee"] {
+			background-color: #000 !important;
+		}
+		
+	}
+	
+	
+	/* navbox at bottom */
+	.navbox-title, .navbox-group, .navbox-abovebelow {
+		background: #102 !important;
+		border-color: #666 !important;
+	}
+	.navbox-even {
+		background: #222 !important;
+		border-color: #666 !important;
+	}
+	.navbox-odd {
+		background: #111 !important;
+		border-color: #666 !important;
+	}
+	
 	
 	/* Contents */
 	.toc {
@@ -103,4 +144,31 @@
 		color: var(--headerTx);
 	}
 
+	/* inputs */
+	.mwe-popups {
+		background-color: #333;
+	}
+	a.mwe-popups-extract::after {
+        background-image: linear-gradient(90deg, transparent, #333) !important;
+    }
+
+	/* inputs */
+	#simpleSearch input {
+		background-color: #222;
+		color: inherit;
+	}
+
+	.pure-form input[type="search"] {
+		background-color: #333;
+	}
+	
+	.search-container .js-langpicker-label {
+		color: #aaa;
+	}
+	
+	/* language changer */
+	.lang-list-button {
+		outline: inherit;
+		background-color: #222;
+	}
 }
