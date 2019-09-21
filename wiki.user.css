@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wiki Black
 @namespace      GrauGeist
-@version        0.0.9
+@version        0.0.10
 @homepageURL	https://github.com/GrauGeist/wiki-black
 @updateURL		https://raw.githubusercontent.com/GrauGeist/wiki-black/master/wiki.user.css
 @supportURL 	https://github.com/GrauGeist/wiki-black/issues
@@ -73,6 +73,16 @@
 	}
 	.vectorTabs li.selected a {
 		color: var(--headerTx) !important;	
+	}
+	
+	
+	/* Wikitable */
+	.wikitable {
+		background-color: #111;
+		color: #eee;
+		tbody > tr > th {
+			background-color: #102;
+		}
 	}
 	
 	/* Infobox */
