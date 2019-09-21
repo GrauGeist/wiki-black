@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wiki Black
 @namespace      GrauGeist
-@version        0.0.7
+@version        0.0.8
 @homepageURL	https://github.com/GrauGeist/wiki-black
 @updateURL		https://raw.githubusercontent.com/GrauGeist/wiki-black/master/wiki.user.css
 @supportURL 	https://github.com/GrauGeist/wiki-black/issues
@@ -13,11 +13,12 @@
 == colors ==
 @var	color		bodyBg			'Body background'				#111
 @var	color		blackBg			'Black background'				#000
-@var	color		bluedBg			'Blued background'				#002
+@var	color		bluedBg			'Blued background'				#102
 @var	color		inactiveBg		'Inactive background'			#668
 @var	color		selectedBg		'Selected background'			#338
 @var	color		basicTx			'basic Text'					#eee
 @var	color		headerTx		'header Text'					#ddd
+@var	color		urlColor		'URL Color'						#98f
 
 
 ==/UserStyle== */
@@ -26,12 +27,19 @@
 	:root {
 		--bodyBg: bodyBg;
 		--blackBg: blackBg;
+		--bluedBg: bluedBg;
 		--inactiveBg: inactiveBg;
 		--selectedBg: selectedBg;
 		--basicTx: basicTx;
 		--headerTx: headerTx;
+		--urlColor: urlColor;
 	}
-		
+	
+	/* ALL links */
+	a {
+		color: var(--urlColor) !important;
+	}
+	
 	/* left & top nav */
 	body, .noprint {
 		background: var(--bodyBg) !important;
@@ -74,10 +82,10 @@
 		
 	}
 	.infobox td[style*="background:#CCF"] {
-			background: #446 !important;
+			background: #437 !important;
 		}
 	.infobox th[style*="background:#EEF"], .infobox th[style*="background:#DDF"] {
-			background: #114 !important;
+			background: #215 !important;
 		}
 	.infobox td[style*="background:#EEF"] {
 			background: var(--bluedBg) !important;
