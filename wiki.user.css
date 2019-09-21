@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wiki Black
 @namespace      GrauGeist
-@version        0.0.6
+@version        0.0.7
 @homepageURL	https://github.com/GrauGeist/wiki-black
 @updateURL		https://raw.githubusercontent.com/GrauGeist/wiki-black/master/wiki.user.css
 @supportURL 	https://github.com/GrauGeist/wiki-black/issues
@@ -11,75 +11,88 @@
 @preprocessor stylus
 
 == colors ==
-@var	color		blackBg			'Black Background'				#000
-@var	color		infoBg			'Infobox Background'			#111
-@var	color		InactiveTab		'Inactive Tab'					#668
-@var	color		SelectTab		'Inactive Tab'					#338
-@var	color		whiteTx			'white Text'					#000
+@var	color		bodyBg			'Body background'				#111
+@var	color		blackBg			'Black background'				#000
+@var	color		bluedBg			'Blued background'				#002
+@var	color		inactiveBg		'Inactive background'			#668
+@var	color		selectedBg		'Selected background'			#338
+@var	color		basicTx			'basic Text'					#eee
+@var	color		headerTx		'header Text'					#ddd
 
 
 ==/UserStyle== */
 
 @-moz-document domain("wikipedia.org") {
-
-	body, .noprint, .mw-body {
-		background: #000 !important;
-		color: #eee;
+	:root {
+		--bodyBg: bodyBg;
+		--blackBg: blackBg;
+		--inactiveBg: inactiveBg;
+		--selectedBg: selectedBg;
+		--basicTx: basicTx;
+		--headerTx: headerTx;
+	}
+		
+	/* left & top nav */
+	body, .noprint {
+		background: var(--bodyBg) !important;
+		color: var(--basicTx);
+	}
+	
+	/* main body */
+	.mw-body {
+		background: var(--blackBg) !important;
+		color: inherit;
 	}
 	
 	h1,h2 {
-		color: #ddd;
+		color: var(--headerTx);
 	}
 	
+	/* disable Banner */
 	.cbnnr-main {
 		display: none;
 	}
 
+	/* Tabs at top */
 	.vectorTabs li {
-		background-image: none;
-		background-color: #668;
-		
+		background-image: linear-gradient(var(--bodyBg), var(--inactiveBg));
 	}
 	.vectorTabs li a {
 		color: #bbb;	
 	}
-	
-	
 	.vectorTabs li.selected {
-		background-image: none;
-		background-color: #338;
-		
+		background-image: linear-gradient(var(--bodyBg), var(--selectedBg));
 	}
 	.vectorTabs li.selected a {
-		color: #ddd !important;	
+		color: var(--headerTx) !important;	
 	}
 	
 	/* Infobox */
 	.infobox {
-		background: #111;
-		color: #ddd;
+		background: var(--bodyBg);
+		color: var(--headerTx);
 		
 	}
 	.infobox td[style*="background:#CCF"] {
-			background: #338 !important;
+			background: #446 !important;
 		}
 	.infobox th[style*="background:#EEF"], .infobox th[style*="background:#DDF"] {
-			background: #55a !important;
+			background: #114 !important;
 		}
 	.infobox td[style*="background:#EEF"] {
-			background: #001 !important;
+			background: var(--bluedBg) !important;
 		}
 	
 	/* Contents */
 	.toc {
-		background: #111;
-		color: #ddd;		
+		background: var(--bodyBg);
+		color: var(--headerTx);		
 	}
 	.toctitle h2 {
-		color :#eee;
+		color :var(--bodyTx);
 	}
 	.tocnumber {
-		color: #ddd;
+		color: var(--headerTx);
 	}
 
 }
