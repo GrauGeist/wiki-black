@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wiki Black
 @namespace      GrauGeist
-@version        0.0.10
+@version        0.0.11
 @homepageURL	https://github.com/GrauGeist/wiki-black
 @updateURL		https://raw.githubusercontent.com/GrauGeist/wiki-black/master/wiki.user.css
 @supportURL 	https://github.com/GrauGeist/wiki-black/issues
@@ -15,7 +15,7 @@
 @var	color		blackBg			'Black background'				#000
 @var	color		bluedBg			'Blued background'				#102
 @var	color		inactiveBg		'Inactive background'			#223
-@var	color		selectedBg		'Selected background'			#338
+@var	color		selectedBg		'Selected background'			#327
 @var	color		basicTx			'basic Text'					#eee
 @var	color		headerTx		'header Text'					#ddd
 @var	color		urlColor		'URL Color'						#98f
@@ -73,6 +73,15 @@
 	}
 	.vectorTabs li.selected a {
 		color: var(--headerTx) !important;	
+	}
+	
+	/* footer at bottom */
+	.footer-sidebar-content, .app-badges .footer-sidebar-content {
+		background-color: #333;
+		
+		.footer-sidebar-text {
+			color: #eee;
+		}
 	}
 	
 	
